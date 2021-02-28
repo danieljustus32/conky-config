@@ -1,0 +1,53 @@
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 10,
+    default_color = '#A4BCDC',
+    color1 = '#F1F1F2',
+    color2 = '#FFFFFF',
+    color3 = '#7192D3',
+    double_buffer = true,
+    draw_borders = false,
+    draw_outline = false, -- amplifies text if yes
+    draw_shades = false,
+    font = 'Ubuntu Mono:normal:size=11',
+    gap_x = 10,
+    gap_y = 152,
+    maximum_width  = 450,
+    minimum_width  = 450,
+    no_buffers = true,
+
+    own_window = true,
+    own_window_type = 'desktop',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 70,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    draw_blended = false,
+
+    stippled_borders = 2,
+    update_interval = 1.0,
+    uppercase = false, -- set to yes if you want all text to be in uppercase
+    use_spacer = 'right',
+    use_xft = true,
+    xinerama_head = 2,
+
+}
+
+conky.text = [[
+${color1}${font Sans:normal:size=9}CPU ${hr 2}$color$font
+${execi 86400 cat /proc/cpuinfo | grep 'model name' | uniq | sed 's/model name\t: //'}
+
+Total CPU: ${cpu cpu0}%
+${color2}${cpubar}$color
+${cpugraph FFFFFF FFFFFF}
+Core 1: ${if_match ${freq 1}<1000} ${endif}${freq 1} MHz       
+${if_match ${cpu cpu1}<10} ${endif}${cpu cpu1}%  ${color2}${cpubar cpu1}$color
+Core 2: ${if_match ${freq 2}<1000} ${endif}${freq 2} MHz       
+${if_match ${cpu cpu2}<10} ${endif}${cpu cpu2}%  ${color2}${cpubar cpu2}$color
+Core 3: ${if_match ${freq 3}<1000} ${endif}${freq 3} MHz        
+${if_match ${cpu cpu3}<10} ${endif}${cpu cpu3}%  ${color2}${cpubar cpu3}$color
+Core 4: ${if_match ${freq 4}<1000} ${endif}${freq 4} MHz        
+${if_match ${cpu cpu4}<10} ${endif}${cpu cpu4}%  ${color2}${cpubar cpu4}$color
+                                                                                   
+]];
