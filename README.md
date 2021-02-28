@@ -6,10 +6,12 @@ These are my config files for [Conky](https://github.com/brndnmtthws/conky). Eve
 
 ## Installation
 
-Install Conky, then run ```
-                            git clone https://github.com/danieljustus32/conky-config.git   
-                            cp -R conky-config-main ~/.conky   
-                            cd ~/.conky   
-                            chmod +x start.sh   
-                        ```
+Install Conky, then run 
+```
+  git clone https://github.com/danieljustus32/conky-config.git   
+  cp -R conky-config-main ~/.conky   
+  cd ~/.conky   
+  chmod +x start.sh     
+```
+
 Add `~/.conky/start.sh` to your list of startup applications, then edit the various config files in this directory to suit your system
