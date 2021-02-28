@@ -14,4 +14,4 @@ Install Conky, then run
   chmod +x start.sh     
 ```
 
-Add `~/.conky/start.sh` to your list of startup applications, then edit the various config files in this directory to suit your system
+Add `~/.conky/start.sh` to your list of startup applications, then edit the various config files in this directory to suit your system. You can just run `./start.sh` to start conky for the first time. Note: It may be helpful to add a 5-10 second delay on this command, as I've experienced either X or certain window managers not playing nice with Conky when it tries to run while the desktop environment is still being initialized. Hope you find this useful!
