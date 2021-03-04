@@ -44,7 +44,7 @@ conky.config = {
     show_graph_range = false,
 }
 conky.text = [[
-${alignc}${font :size=28} ${time %k:%M %p}${font}
+${alignc}${font :size=28} ${time %k:%M}${font}
 
 ${font Fira Mono:size=14:style=bold}${execpi 1 ~/.conky/cal.lua | sed 's/^/          /'}${font}
 

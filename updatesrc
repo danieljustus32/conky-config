@@ -37,7 +37,6 @@ conky.config = {
 
 conky.text = [[
 ${color1}${font Sans:normal:size=9}UPDATES ${hr 2}$color$font
-Available: ${color1}${execi 1800 checkupdates | wc -l}${color}
-Pending Package Upgrades:
-${color1}${execi 1800 checkupdates}   
+Packages Ready to Upgrade:
+${color1}${execi 60 head -7 checkupdates}   
 ]];
